@@ -33,7 +33,7 @@ class UtilFollowers {
     List getFollowRelation( List users ){
         users.collect{user ->
             //they follow person <=> person is been follow by them
-            [user : getFollowers(user).intersect(users) ]
+            ["$user" : getFollowers(user).intersect(users) ]
         }
     }
 }
